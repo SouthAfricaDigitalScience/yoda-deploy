@@ -7,9 +7,10 @@ module add python/2.7.13-gcc-${GCC_VERSION}
 module add boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
 
 echo ${SOFT_DIR}
-cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
+cd ${WORKSPACE}/${NAME}-${VERSION}
+
 echo "All tests have passed, will now build into ${SOFT_DIR}"
-rm -rf *
+make clean
 PYTHON_VERSION=${PYTHON_VERSION:0:3} ../configure \
 --prefix=${SOFT_DIR}-gcc-${GCC_VERSION}
 

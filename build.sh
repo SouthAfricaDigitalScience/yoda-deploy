@@ -44,10 +44,9 @@ else
   echo "continuing from previous builds, using source at " ${SRC_DIR}/${SOURCE_FILE}
 fi
 tar xjf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
-mkdir -p ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
+cd ${WORKSPACE}/${NAME}-${VERSION}
 # YODA needs this python major version.s
-PYTHON_VERSION=${PYTHON_VERSION:0:3} ../configure \
+PYTHON_VERSION=${PYTHON_VERSION:0:3} ./configure \
 --prefix=${SOFT_DIR}-gcc-${GCC_VERSION}
 
 make
