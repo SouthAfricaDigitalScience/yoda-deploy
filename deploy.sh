@@ -4,7 +4,7 @@
 module add deploy
 module add gcc/${GCC_VERSION}
 module add python/2.7.13-gcc-${GCC_VERSION}
-module add boost/boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
+module add boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
 
 echo ${SOFT_DIR}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
@@ -28,6 +28,11 @@ proc ModulesHelp { } {
 }
 
 module-whatis   "$NAME $VERSION : See https://github.com/SouthAfricaDigitalScience/YODA-deploy"
+
+module add gcc/${GCC_VERSION}
+module add python/2.7.13-gcc-${GCC_VERSION}
+module add boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
+
 setenv YODA_VERSION       $VERSION
 setenv YODA_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
 prepend-path LD_LIBRARY_PATH   $::env(YODA_DIR)/lib

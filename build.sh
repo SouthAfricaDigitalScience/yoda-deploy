@@ -17,7 +17,7 @@
 module add ci
 module add gcc/${GCC_VERSION}
 module add python/2.7.13-gcc-${GCC_VERSION}
-module add boost/boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
+module add boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
 #$NAME is upper case : YODA
 
 SOURCE_FILE=${NAME}-${VERSION}.tar.bz2
