@@ -11,7 +11,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}
 
 echo "All tests have passed, will now build into ${SOFT_DIR}"
 make clean
-PYTHON_VERSION=${PYTHON_VERSION:0:3} ../configure \
+PYTHON_VERSION=${PYTHON_VERSION:0:3} ./configure \
 --prefix=${SOFT_DIR}-gcc-${GCC_VERSION}
 
 make install
