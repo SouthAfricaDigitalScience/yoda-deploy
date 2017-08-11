@@ -17,6 +17,7 @@
 module add ci
 module add gcc/${GCC_VERSION}
 module add python/2.7.13-gcc-${GCC_VERSION}
+module add boost/boost/1.63.0-gcc-${GCC_VERSION}-mpi-1.8.8
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 make check
 
