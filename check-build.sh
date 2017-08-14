@@ -51,7 +51,7 @@ prepend-path PATH                           $::env(YODA_DIR)/bin
 setenv CPPFLAGS            "-I$::env(YODA_DIR)/include $CPPFLAGS"
 setenv LDFLAGS           "-L$::env(YODA_DIR)/lib $LDFLAGS"
 MODULE_FILE
-) > modules/$VERSION
+) > modules/$VERSION-gcc-${GCC_VERSION}
 
 mkdir -vp ${HEP}/${NAME}
 cp -v modules/$VERSION ${HEP}/${NAME}
